@@ -46,8 +46,12 @@ INSTALLED_APPS = [
     'networkgraphcase',
     'recovery',
     'victims',
-    'currentcase'
+    'currentcase',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

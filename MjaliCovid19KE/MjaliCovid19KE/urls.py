@@ -26,6 +26,7 @@ urlpatterns = [
     path('cases/',include('cases.urls')),
     path('network/',include('networkgraphcase.urls')),
     path('map/',include('map.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('victims/',include('victims.urls'))
     
 ]

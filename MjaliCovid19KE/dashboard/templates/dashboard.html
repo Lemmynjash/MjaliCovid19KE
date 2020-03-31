@@ -548,7 +548,7 @@
                             <div class="form-group">
                                 <label for="message">Message</label>
                                 <textarea class="form-control" name="message" id="message">
-</textarea>
+                                </textarea>
                             </div>
                             <p>Tweet at me <a href="https://twitter.com/zp_uca" target="_blank">@zp_uca</a>.</p>
                         </div>
@@ -594,7 +594,8 @@
                             </h6>
                             <div class="d-flex d-lg-block d-xl-flex align-items-end">
                                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">{{confirmedcases}}</h3>
-                                <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-danger">{{hospitalizedcases}}<i
+                                <p class="tx-11 tx-color-03 mg-b-0"><span
+                                        class="tx-medium tx-danger">{{hospitalizedcases}}<i
                                             class="icon ion-md-arrow-up"></i></span> in Hospital</p>
                             </div>
                             <div class="chart-three">
@@ -609,7 +610,8 @@
                                     class="d-none d-md-inline">Currently </span>In Hospital</h6>
                             <div class="d-flex d-lg-block d-xl-flex align-items-end">
                                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">{{hospitalizedcases}}</h3>
-                                <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-success">{{totalPercentage}}%<i
+                                <p class="tx-11 tx-color-03 mg-b-0"><span
+                                        class="tx-medium tx-success">{{totalPercentage}}%<i
                                             class="icon ion-md-arrow-down"></i></span> of total cases</p>
                             </div>
                             <div class="chart-three">
@@ -624,7 +626,8 @@
                                 Intensive Care</h6>
                             <div class="d-flex d-lg-block d-xl-flex align-items-end">
                                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">{{intensivecare}}</h3>
-                                <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-success">{{hospitalizedcases}}<i
+                                <p class="tx-11 tx-color-03 mg-b-0"><span
+                                        class="tx-medium tx-success">{{hospitalizedcases}}<i
                                             class="icon ion-md-arrow-up"></i></span> in stable condition</p>
                             </div>
                             <div class="chart-three">
@@ -638,7 +641,8 @@
                             <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Discharged</h6>
                             <div class="d-flex d-lg-block d-xl-flex align-items-end">
                                 <h3 class="tx-normal tx-rubik mg-b-0 mg-r-5 lh-1">{{recoveredpatients}}</h3>
-                                <p class="tx-11 tx-color-03 mg-b-0"><span class="tx-medium tx-success">{{totalPercentage}}% <i
+                                <p class="tx-11 tx-color-03 mg-b-0"><span
+                                        class="tx-medium tx-success">{{totalPercentage}}% <i
                                             class="icon ion-md-arrow-up"></i></span> of total cases</p>
                             </div>
                             <div class="chart-three">
@@ -683,7 +687,7 @@
                                 </div>
 
                                 <div class="dropdown show tx-12 tx-color-03 mg-b-0 mg-t-3">
-                                    <a href="{% url 'dashboard' %}#" role="button" id="dropdownMenuLink graphType"
+                                    <a href="{% url 'dashboard' %}" role="button" id="dropdownMenuLink graphType"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bar <i
                                             class="icon ion-ios-arrow-down"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -716,7 +720,8 @@
                                     <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 mg-b-5">Male</p>
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle bg-primary mg-r-5"></div>
-                                        <h5 class="tx-normal tx-rubik mg-b-0">{{male}}<small class="tx-color-04">0.0%</small>
+                                        <h5 class="tx-normal tx-rubik mg-b-0">{{male}}<small
+                                                class="tx-color-04">{{malePercentage}}%</small>
                                         </h5>
                                     </div>
                                 </div><!-- col -->
@@ -725,7 +730,8 @@
                                         Female</p>
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle bg-pink mg-r-5"></div>
-                                        <h5 class="tx-normal tx-rubik mg-b-0">{{female}}<small class="tx-color-04">0.0%</small>
+                                        <h5 class="tx-normal tx-rubik mg-b-0">{{female}}<small
+                                                class="tx-color-04">{{femalePercentage}}%</small>
                                         </h5>
                                     </div>
                                 </div><!-- col -->
@@ -757,8 +763,8 @@
                                         <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
                                                 href="cases/search%3Fcase[nationality]=187.html">{{kenyan}}</a></span>
                                         <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                                href="cases/search%3Fcase[nationality]=187.html">0%</a> <i
-                                                class="icon ion-md-arrow-up"></i></span>
+                                                href="cases/search%3Fcase[nationality]=187.html">{{kenyanPercentage}}%</a>
+                                            <i class="icon ion-md-arrow-up"></i></span>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
@@ -768,8 +774,8 @@
                                         <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
                                                 href="cases/search%3Fcase[nationality]=43.html">{{spanish}}</a></span>
                                         <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                                href="cases/search%3Fcase[nationality]=43.html">0%</a> <i
-                                                class="icon ion-md-arrow-up"></i></span>
+                                                href="cases/search%3Fcase[nationality]=43.html">{{spanishPercentage}}%</a>
+                                            <i class="icon ion-md-arrow-up"></i></span>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
@@ -779,42 +785,44 @@
                                         <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
                                                 href="cases/search%3Fcase[nationality]=70.html">{{burundians}}</a></span>
                                         <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                                href="cases/search%3Fcase[nationality]=70.html">0%</a> <i
-                                                class="icon ion-md-arrow-up"></i></span>
+                                                href="cases/search%3Fcase[nationality]=70.html">{{burundiansPercentage}}%</a>
+                                            <i class="icon ion-md-arrow-up"></i></span>
                                     </div>
-                                    {% comment %} <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
                                             style="background-color: #b2bece"></div>
                                         <span class="tx-medium mg-l-10"><a class="tx-color-01"
-                                                href="cases/search%3Fcase[nationality]=98.html">Americans</a></span>
+                                                href="cases/search%3Fcase[nationality]=98.html">French</a></span>
                                         <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
-                                                href="cases/search%3Fcase[nationality]=98.html">1</a></span>
+                                                href="cases/search%3Fcase[nationality]=98.html">{{french}}</a></span>
                                         <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                                href="cases/search%3Fcase[nationality]=98.html">0%</a> <i
-                                                class="icon ion-md-arrow-up"></i></span>
-                                    </div> {% endcomment %}
-                                    {% comment %} <div class="d-flex align-items-center">
+                                                href="cases/search%3Fcase[nationality]=98.html">{{frenchPercentage}}%</a>
+                                            <i class="icon ion-md-arrow-up"></i></span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
                                             style="background-color: #a5d7fd"></div>
                                         <span class="tx-medium mg-l-10"><a class="tx-color-01"
-                                                href="cases/search%3Fcase[nationality]=18.html">Bangladeshi</a></span>
+                                                href="cases/search%3Fcase[nationality]=18.html">Mexicans</a></span>
                                         <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
-                                                href="cases/search%3Fcase[nationality]=18.html">5</a></span>
+                                                href="cases/search%3Fcase[nationality]=18.html">{{mexicans}}</a></span>
                                         <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                                href="cases/search%3Fcase[nationality]=18.html">2.21%</a> <i
-                                                class="icon ion-md-arrow-up"></i></span>
+                                                href="cases/search%3Fcase[nationality]=18.html">{{mexicansPercentage}}%</a>
+                                            <i class="icon ion-md-arrow-up"></i></span>
                                     </div>
+
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
                                             style="background-color: #4cebb5"></div>
                                         <span class="tx-medium mg-l-10"><a class="tx-color-01"
-                                                href="cases/search%3Fcase[nationality]=124.html">Malaysian</a></span>
+                                                href="cases/search%3Fcase[nationality]=124.html">Foreigners</a></span>
                                         <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
-                                                href="cases/search%3Fcase[nationality]=124.html">5</a></span>
+                                                href="cases/search%3Fcase[nationality]=124.html">{{foreigners}}</a></span>
                                         <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                                href="cases/search%3Fcase[nationality]=124.html">2.21%</a> <i
-                                                class="icon ion-md-arrow-up"></i></span>
+                                                href="cases/search%3Fcase[nationality]=124.html">{{foreignersPercentage}}%</a>
+                                            <i class="icon ion-md-arrow-up"></i></span>
                                     </div>
+                                    {% comment %}
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
                                             style="background-color: #fec85e"></div>
@@ -879,15 +887,17 @@
                                             style="background-color: #ff7c8f"></div>
                                         <span class="tx-medium mg-l-10">Local Transmission</span>
                                         <span class="tx-rubik mg-l-auto">{{localTransmission}}</span>
-                                        <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">{{totalLocalPercentage}}% <i
-                                                class="icon ion-md-arrow-up"></i></span>
+                                        <span
+                                            class="wd-60 tx-right tx-rubik mg-l-5 tx-success">{{totalLocalPercentage}}%
+                                            <i class="icon ion-md-arrow-up"></i></span>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
                                             style="background-color: #66a4fb"></div>
                                         <span class="tx-medium mg-l-10">Imported Cases</span>
                                         <span class="tx-rubik mg-l-auto">{{importedCase}}</span>
-                                        <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success">{{totalImportedPercentage}}%<i
+                                        <span
+                                            class="wd-60 tx-right tx-rubik mg-l-5 tx-success">{{totalImportedPercentage}}%<i
                                                 class="icon ion-md-arrow-up"></i></span>
                                     </div>
                                 </div>
@@ -959,7 +969,8 @@
                                             <i data-feather="wifi" class="wd-20 ht-20"></i>
                                         </div>
                                         <div class="media-body mg-l-10">
-                                            <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">{{localTransmission}}</h4>
+                                            <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">
+                                                {{localTransmission}}</h4>
                                             <p
                                                 class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">
                                                 Local <span class="d-none d-md-inline">Transmission</span></p>
@@ -973,7 +984,8 @@
                                             <i data-feather="send" class="wd-20 ht-20"></i>
                                         </div>
                                         <div class="media-body mg-l-10">
-                                            <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">{{importedCase}}</h4>
+                                            <h4 class="tx-normal tx-rubik tx-spacing--2 lh-1 mg-b-5">{{importedCase}}
+                                            </h4>
                                             <p
                                                 class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 tx-nowrap mg-b-0">
                                                 Imported <span class="d-none d-md-inline">Case</span></p>
@@ -1009,19 +1021,22 @@
                                 <table class="table table-borderless table-dashboard table-dashboard-one">
                                     <thead>
                                         <tr>
-                                            <th class="wd-40">Clusters</th>
-                                            <th class="wd-25 text-right">Infection</th>
-
+                                        
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    
-                                        {% for mycases in mycases.all %}
                                         <tr>
-                                            <td class="tx-medium">{{mycases.current_place_of_origin}}</td>
-                                            <td class="text-right">7</td>
+                                            <td colspan="2" style="text-align:center;border-bottom:#aaa 1px solid;"><a
+                                                    href="/wiki/File:Kenya_corona_county_map_26032020.png"
+                                                    class="image"><img alt="Kenya corona county map 26032020.png"
+                                                        src="//upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kenya_corona_county_map_26032020.png/220px-Kenya_corona_county_map_26032020.png"
+                                                        decoding="async" width="220" height="288"
+                                                        srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kenya_corona_county_map_26032020.png/330px-Kenya_corona_county_map_26032020.png 1.5x, //upload.wikimedia.org/wikipedia/commons/3/39/Kenya_corona_county_map_26032020.png 2x"
+                                                        data-file-width="439" data-file-height="574" /></a>
+
+                                            </td>
                                         </tr>
-                                        {% endfor %}
+
                                     </tbody>
                                 </table>
                             </div><!-- table-responsive -->
@@ -1062,7 +1077,8 @@
                                         <h6
                                             class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">
                                             Imported Cases</h6>
-                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">7</h4>
+                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">{{importedCase}}
+                                        </h4>
                                     </div>
                                 </div>
                                 <div class="media mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40">
@@ -1075,7 +1091,8 @@
                                             class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">
                                             Local
                                             Transmissions</h6>
-                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">0</small></h4>
+                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">
+                                            {{localTransmission}}</small></h4>
                                     </div>
                                 </div>
                             </div>
@@ -1092,51 +1109,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    {% for mycases in mycases %}
                                     <tr>
-                                        <td class="tx-color-03 tx-normal"><a
-                                                href="cases/singapore-case-226-49-year-old-male-dutch-national.html">7</a>
+                                        <td class="tx-color-03 tx-normal"><a href="cases/">{{mycases.id}}</a>
                                         </td>
-                                        <td class="tx-medium text-right">18 March 2020</td>
-                                        <td class="text-right">33</td>
-                                        <td class="text-right tx-primary">Male</td>
-                                        <td class="tx-medium text-right">15 March 2020</td>
+                                        <td class="tx-medium text-right">{{mycases.confirmed_date|date:"D, d M,Y"}}</td>
+                                        <td class="text-right">{{mycases.victim_fk.age}}</td>
+                                        <td class="text-right tx-primary">{{mycases.victim_fk.gender}}</td>
+                                        <td class="tx-medium text-right">{{mycases.symptopmatic_at|date:"D, d M,Y"}}</td>
                                     </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a
-                                                href="cases/singapore-case-225-63-year-old-male-singapore-citizen.html">6</a>
-                                        </td>
-                                        <td class="tx-medium text-right">18 March 2020</td>
-                                        <td class="text-right">38</td>
-                                        <td class="text-right tx-primary">Female</td>
-                                        <td class="tx-medium text-right">15 March 2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a
-                                                href="cases/singapore-case-224-50-year-old-male-singapore-citizen.html">5</a>
-                                        </td>
-                                        <td class="tx-medium text-right">18 March 2020</td>
-                                        <td class="text-right">45</td>
-                                        <td class="text-right tx-primary">Male</td>
-                                        <td class="tx-medium text-right">15 March 2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a
-                                                href="cases/singapore-case-223-60-year-old-male-singapore-citizen.html">4</a>
-                                        </td>
-                                        <td class="tx-medium text-right">15 March 2020</td>
-                                        <td class="text-right">Unknown</td>
-                                        <td class="text-right tx-primary">Male</td>
-                                        <td class="tx-medium text-right">Unknown</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a
-                                                href="cases/singapore-case-222-41-year-old-male-french-national-who-is-a-singapore-work-pass-holder.html">3</a>
-                                        </td>
-                                        <td class="tx-medium text-right">15 March 2020</td>
-                                        <td class="text-right">Unknown</td>
-                                        <td class="text-right tx-primary">Male</td>
-                                        <td class="tx-medium text-right">Unknown</td>
-                                    </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div><!-- table-responsive -->

@@ -85,12 +85,12 @@
         <a href="{% url 'currentcasehosp' %}" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
         <div class="navbar-brand">
             <a class="df-logo" href="{% url 'dashboard' %}">
-              MJALI covid19<span>&nbsp;KE</span>
+                MJALI covid19<span>&nbsp;KE</span>
             </a> </div><!-- navbar-brand -->
         <div id="navbarMenu" class="navbar-menu-wrapper">
             <div class="navbar-menu-header">
                 <a class="df-logo" href="{% url 'dashboard' %}">
-                   MJALI covid19<span>&nbsp;KE</span>
+                    MJALI covid19<span>&nbsp;KE</span>
                 </a> <a id="mainMenuClose" href="{% url 'currentcasehosp' %}"><i data-feather="x"></i></a>
             </div><!-- navbar-menu-header -->
             <ul class="nav navbar-menu">
@@ -122,7 +122,7 @@
                     </ul>
                 </li>
 
-                 <li class="nav-item with-sub active">
+                <li class="nav-item with-sub active">
                     <a href="{% url 'currentcasehosp' %}" class="nav-link"><i data-feather="sun"></i> Insights</a>
                     <ul class="navbar-menu-sub">
                         <li class="nav-sub-item">
@@ -155,14 +155,15 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="{% url 'map' %}">
                         <ion-icon class="d-lg-none mg-r-10" name="map-outline"></ion-icon>&nbsp;Map
-                    </a> 
-                    </li>
+                    </a>
+                </li>
 
             </ul>
         </div><!-- navbar-menu-wrapper -->
 
         <div class="navbar-right">
-            <a id="navbarSearch" href="{% url 'currentcasehosp' %}" class="search-link"><i data-feather="search"></i></a>
+            <a id="navbarSearch" href="{% url 'currentcasehosp' %}" class="search-link"><i
+                    data-feather="search"></i></a>
             <div class="dropdown dropdown-message">
                 <a href="{% url 'currentcasehosp' %}" class="dropdown-link new-indicator" data-toggle="dropdown">
                     <i data-feather="bell"></i>
@@ -192,8 +193,8 @@
                             placeholder="Type the case number and hit enter to view" />
                         <!-- <input type="search" class="form-control"  placeholder="Type the case number and hit enter to view"> -->
                         <button class="btn"><i data-feather="search"></i></button>
-                        <a id="navbarSearchClose" href="{% url 'currentcasehosp' %}" class="link-03 mg-l-5 mg-lg-l-10"><i
-                                data-feather="x"></i></a>
+                        <a id="navbarSearchClose" href="{% url 'currentcasehosp' %}"
+                            class="link-03 mg-l-5 mg-lg-l-10"><i data-feather="x"></i></a>
                     </div><!-- navbar-search-header -->
                 </form>
                 <div class="navbar-search-body">
@@ -597,7 +598,7 @@
                         <div class="card-footer pd-y-15 pd-x-20">
                             <div class="row row-sm">
                                 <div class="col-6 col-sm-4 col-md-3 col-lg">
-                                    <h4 class="tx-normal tx-rubik mg-b-10">7</h4>
+                                    <h4 class="tx-normal tx-rubik mg-b-10">{{hospitalizedcases}}</h4>
                                     <div class="progress ht-2 mg-b-10">
                                         <div class="progress-bar bg-df-2" role="progressbar" aria-valuenow="100"
                                             aria-valuemin="0" aria-valuemax="53" style="width: 53%;"></div>
@@ -606,7 +607,7 @@
                                         Hospital</h6>
                                 </div><!-- col -->
                                 <div class="col-6 col-sm-4 col-md-3 col-lg">
-                                    <h4 class="tx-normal tx-rubik mg-b-10">0</h4>
+                                    <h4 class="tx-normal tx-rubik mg-b-10">{{intensivecare}}</h4>
                                     <div class="progress ht-2 mg-b-10">
                                         <div class="progress-bar bg-df-2" role="progressbar" aria-valuenow="0"
                                             aria-valuemin="0" aria-valuemax="7" style="width: 10%;"></div>
@@ -615,7 +616,7 @@
                                         Care</h6>
                                 </div><!-- col -->
                                 <div class="col-6 col-sm-4 col-md-3 col-lg mg-t-20 mg-sm-t-0">
-                                    <h4 class="tx-normal tx-rubik mg-b-10">0</h4>
+                                    <h4 class="tx-normal tx-rubik mg-b-10">{{recoveredpatients}}</h4>
                                     <div class="progress ht-2 mg-b-10">
                                         <div class="progress-bar bg-df-2" role="progressbar" aria-valuenow="0"
                                             aria-valuemin="0" aria-valuemax="7" style="width: 46%;"></div>
@@ -624,7 +625,7 @@
                                         Discharged</h6>
                                 </div><!-- col -->
                                 <div class="col-6 col-sm-4 col-md-3 col-lg mg-t-20 mg-sm-t-0">
-                                    <h4 class="tx-normal tx-rubik mg-b-10">7</h4>
+                                    <h4 class="tx-normal tx-rubik mg-b-10">{{confirmedcases}}</h4>
                                     <div class="progress ht-2 mg-b-10">
                                         <div class="progress-bar wd-100p bg-df-2" role="progressbar" aria-valuenow="7"
                                             aria-valuemin="0" aria-valuemax="7"></div>
@@ -650,7 +651,7 @@
 
                                         <div
                                             class="pos-absolute a-0 d-flex flex-column align-items-center justify-content-center">
-                                            <h3 class="tx-rubik tx-spacing--1 mg-b-0">100%</h3>
+                                            <h3 class="tx-rubik tx-spacing--1 mg-b-0">{{theTotalPercentage}}%</h3>
                                             <span class="tx-9 tx-semibold tx-sans tx-color-03 tx-uppercase">Of Total
                                                 Cases</span>
                                         </div>
@@ -659,7 +660,7 @@
                                         <h6 class="mg-b-5">Cases in Hospital</h6>
                                         <p class="lh-4 tx-12 tx-color-03 mg-b-15">Percentage of cases currently
                                             hospitalised <span class="d-none d-lg-inline"></span></p>
-                                        <h3 class="tx-spacing--1 mg-b-0">7 cases</h3>
+                                        <h3 class="tx-spacing--1 mg-b-0">{{hospitalizedcases}} cases</h3>
                                     </div><!-- media-body -->
                                 </div><!-- media -->
                             </div>
@@ -671,7 +672,7 @@
                                     <h6 class="mg-b-0">Hospitalised Cases</h6>
                                 </div><!-- card-header -->
                                 <div class="card-body pd-y-10">
-                                    
+
                                     <h6 class="tx-uppercase tx-spacing-1 tx-semibold tx-10 tx-color-02 mg-b-15">Median
                                         Days Spent in Hospital</h6>
 
@@ -702,40 +703,40 @@
                                                     <div class="wd-12 ht-12 rounded-circle bd bd-3 bd-success"></div>
                                                 </td>
                                                 <td class="tx-medium">Below 3 days</td>
-                                                <td class="text-right">1</td>
-                                                <td class="text-right">30.6%</td>
+                                                <td class="text-right">{{lessThanThreeDays}}</td>
+                                                <td class="text-right">{{lessThanThreeDaysPercentage}}%</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="wd-12 ht-12 rounded-circle bd bd-3 bd-primary"></div>
                                                 </td>
                                                 <td class="tx-medium">4-7 days</td>
-                                                <td class="text-right">3</td>
-                                                <td class="text-right">28.9%</td>
+                                                <td class="text-right">{{fromFourToSeven}}</td>
+                                                <td class="text-right">{{fromFourToSevenPercentage}}%</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="wd-12 ht-12 rounded-circle bd bd-3 bd-purple"></div>
                                                 </td>
                                                 <td class="tx-medium">8-14 days</td>
-                                                <td class="text-right">2</td>
-                                                <td class="text-right">30.6%</td>
+                                                <td class="text-right">{{fromEighteToFouteen}}</td>
+                                                <td class="text-right">{{fromEighteToFouteenPercentage}}%</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="wd-12 ht-12 rounded-circle bd bd-3 bd-warning"></div>
                                                 </td>
                                                 <td class="tx-medium">15-21 days</td>
-                                                <td class="text-right">1</td>
-                                                <td class="text-right">5.8%</td>
+                                                <td class="text-right">{{fromFifteenTotwentyOne}}</td>
+                                                <td class="text-right">{{fromFifteenTotwentyOnePercentage}}%</td>
                                             </tr>
                                             <tr>
                                                 <td>
                                                     <div class="wd-12 ht-12 rounded-circle bd bd-3 bd-pink"></div>
                                                 </td>
                                                 <td class="tx-medium">&gt;21 days</td>
-                                                <td class="text-right">0</td>
-                                                <td class="text-right">4.1%</td>
+                                                <td class="text-right">{{greaterThanTwentyOne}}</td>
+                                                <td class="text-right">{{greaterThanTwentyOnePercentage}}%</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
@@ -767,10 +768,10 @@
                                     <span class="tx-medium mg-l-10"><a class="tx-color-01"
                                             href="cases/search%3Fcase[nationality]=187.html">Kenyan</a></span>
                                     <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
-                                            href="cases/search%3Fcase[nationality]=187.html">4</a></span>
+                                            href="cases/search%3Fcase[nationality]=187.html">{{kenyan}}</a></span>
                                     <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                            href="cases/search%3Fcase[nationality]=187.html">0%</a> <i
-                                            class="icon ion-md-arrow-up"></i></span>
+                                            href="cases/search%3Fcase[nationality]=187.html">{{kenyanPercentage}}%</a>
+                                        <i class="icon ion-md-arrow-up"></i></span>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
@@ -778,10 +779,10 @@
                                     <span class="tx-medium mg-l-10"><a class="tx-color-01"
                                             href="cases/search%3Fcase[nationality]=43.html">Spanish</a></span>
                                     <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
-                                            href="cases/search%3Fcase[nationality]=43.html">2</a></span>
+                                            href="cases/search%3Fcase[nationality]=43.html">{{spanish}}</a></span>
                                     <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                            href="cases/search%3Fcase[nationality]=43.html">0%</a> <i
-                                            class="icon ion-md-arrow-up"></i></span>
+                                            href="cases/search%3Fcase[nationality]=43.html">{{spanishPercentage}}%</a>
+                                        <i class="icon ion-md-arrow-up"></i></span>
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
@@ -789,10 +790,44 @@
                                     <span class="tx-medium mg-l-10"><a class="tx-color-01"
                                             href="cases/search%3Fcase[nationality]=70.html">Burundians</a></span>
                                     <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
-                                            href="cases/search%3Fcase[nationality]=70.html">1</a></span>
+                                            href="cases/search%3Fcase[nationality]=70.html">{{burundians}}</a></span>
                                     <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
-                                            href="cases/search%3Fcase[nationality]=70.html">0%</a> <i
-                                            class="icon ion-md-arrow-up"></i></span>
+                                            href="cases/search%3Fcase[nationality]=70.html">{{burundiansPercentage}}%</a>
+                                        <i class="icon ion-md-arrow-up"></i></span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
+                                        style="background-color: #b2bece"></div>
+                                    <span class="tx-medium mg-l-10"><a class="tx-color-01"
+                                            href="cases/search%3Fcase[nationality]=98.html">French</a></span>
+                                    <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
+                                            href="cases/search%3Fcase[nationality]=98.html">{{french}}</a></span>
+                                    <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
+                                            href="cases/search%3Fcase[nationality]=98.html">{{frenchPercentage}}%</a>
+                                        <i class="icon ion-md-arrow-up"></i></span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
+                                        style="background-color: #a5d7fd"></div>
+                                    <span class="tx-medium mg-l-10"><a class="tx-color-01"
+                                            href="cases/search%3Fcase[nationality]=18.html">Mexicans</a></span>
+                                    <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
+                                            href="cases/search%3Fcase[nationality]=18.html">{{mexicans}}</a></span>
+                                    <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
+                                            href="cases/search%3Fcase[nationality]=18.html">{{mexicansPercentage}}%</a>
+                                        <i class="icon ion-md-arrow-up"></i></span>
+                                </div>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
+                                        style="background-color: #4cebb5"></div>
+                                    <span class="tx-medium mg-l-10"><a class="tx-color-01"
+                                            href="cases/search%3Fcase[nationality]=124.html">Foreigners</a></span>
+                                    <span class="tx-rubik mg-l-auto"><a class="tx-color-01"
+                                            href="cases/search%3Fcase[nationality]=124.html">{{foreigners}}</a></span>
+                                    <span class="wd-60 tx-right tx-rubik mg-l-5 tx-success"><a
+                                            href="cases/search%3Fcase[nationality]=124.html">{{foreignersPercentage}}%</a>
+                                        <i class="icon ion-md-arrow-up"></i></span>
                                 </div>
                                 {% comment %} <div class="d-flex align-items-center">
                                     <div class="wd-10 ht-10 rounded-circle pos-relative t--1"
@@ -826,16 +861,16 @@
                                         Female</p>
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle bg-pink mg-r-5"></div>
-                                        <h5 class="tx-normal tx-rubik mg-b-0">2 <small
-                                                class="tx-color-04">0%</small></h5>
+                                        <h5 class="tx-normal tx-rubik mg-b-0">{{female}}<small class="tx-color-04">{{malePercentage}}%</small>
+                                        </h5>
                                     </div>
                                 </div><!-- col -->
                                 <div class="col-6">
                                     <p class="tx-10 tx-uppercase tx-medium tx-color-03 tx-spacing-1 mg-b-5">Male</p>
                                     <div class="d-flex align-items-center">
                                         <div class="wd-10 ht-10 rounded-circle bg-primary mg-r-5"></div>
-                                        <h5 class="tx-normal tx-rubik mg-b-0">5 <small
-                                                class="tx-color-04">0%</small></h5>
+                                        <h5 class="tx-normal tx-rubik mg-b-0">{{male}} <small class="tx-color-04">{{femalePercentage}}%</small>
+                                        </h5>
                                     </div>
                                 </div><!-- col -->
                             </div><!-- row -->
@@ -889,7 +924,7 @@
                                         <h6
                                             class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">
                                             Imported<span class="d-none d-lg-inline"> Cases</span></h6>
-                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">7</h4>
+                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">{{importedCase}}</h4>
                                     </div>
                                 </div>
                                 <div class="media mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40">
@@ -901,7 +936,7 @@
                                         <h6
                                             class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">
                                             Local<span class="d-none d-sm-inline"> Transmission Cases</span></h6>
-                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">0</h4>
+                                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">{{localTransmission}}</h4>
                                     </div>
                                 </div>
                             </div>
@@ -919,54 +954,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                 {% for mycases in mycases %}
                                     <tr>
-                                        <td class="tx-color-03 tx-normal"><a href="../cases/35.html">7</a></td>
-                                        <td class="tx-medium text-right">18 March 2020</td>
-                                        <td class="text-right">39</td>
-                                        <td class="text-right tx-primary">Male</td>
-                                        <td class="text-right">Burundian</td>
-                                        <td class="tx-medium text-right">2</td>
+                                        <td class="tx-color-03 tx-normal"><a href="../cases/35.html">{{mycases.id}}</a></td>
+                                        <td class="tx-medium text-right">{{mycases.confirmed_date|date:"D, d M,Y"}}</td>
+                                        <td class="text-right">{{mycases.victim_fk.age}}</td>
+                                        <td class="text-right tx-primary">{{mycases.victim_fk.gender}}</td>
+                                        <td class="text-right">{{mycases.victim_fk.citizen}}</td>
+                                        <td class="tx-medium text-right">{{}}</td>
                                     </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a href="../cases/42.html">6</a></td>
-                                        <td class="tx-medium text-right">18 March 2020</td>
-                                        <td class="text-right">39</td>
-                                        <td class="text-right tx-primary">Male</td>
-                                        <td class="text-right">Spanish</td>
-                                        <td class="tx-medium text-right">2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a href="../cases/41.html">5</a></td>
-                                        <td class="tx-medium text-right">18 March 2020</td>
-                                        <td class="text-right">44</td>
-                                        <td class="text-right tx-primary">Male</td>
-                                        <td class="text-right">Spanish</td>
-                                        <td class="tx-medium text-right">2</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a href="../cases/82.html">4</a></td>
-                                        <td class="tx-medium text-right">13 March 2020</td>
-                                        <td class="text-right">25</td>
-                                        <td class="text-right tx-pink">Male</td>
-                                        <td class="text-right">Kenyan</td>
-                                        <td class="tx-medium text-right">8</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a href="../cases/90.html">3</a></td>
-                                        <td class="tx-medium text-right">13 March 2020</td>
-                                        <td class="text-right">33</td>
-                                        <td class="text-right tx-pink">Female</td>
-                                        <td class="text-right">Kenyan</td>
-                                        <td class="tx-medium text-right">8</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tx-color-03 tx-normal"><a href="../cases/94.html">2</a></td>
-                                        <td class="tx-medium text-right">12 March 2020</td>
-                                        <td class="text-right">34</td>
-                                        <td class="text-right tx-pink">Female</td>
-                                        <td class="text-right">Kenyan</td>
-                                        <td class="tx-medium text-right">8</td>
-                                    </tr>
+                                     {% endfor %}
+                                   
                                 </tbody>
                             </table>
                         </div><!-- table-responsive -->
@@ -988,7 +986,7 @@
             <div>
                 <span>Created by <a href="#">Amref</a></span>
             </div>
-           
+
         </div>
     </footer>
     <!-- footer end -->
@@ -1500,7 +1498,7 @@
             "Kenyans": 4,
             "Spanish": 2,
             "Burundians": 1
-            
+
         };
 
         /** PIE CHART **/
@@ -1508,8 +1506,7 @@
             labels: Object.keys(nationalities),
             datasets: [{
                 data: Object.values(nationalities),
-                backgroundColor: ["#66a4fb", "#ff7c8f", "#a4e063"
-                ]
+                backgroundColor: ["#66a4fb", "#ff7c8f", "#a4e063"]
             }]
         };
 

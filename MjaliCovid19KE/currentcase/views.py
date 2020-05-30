@@ -31,8 +31,7 @@ def currentcase(request):
     lessFifteen = today-timedelta(days=15)
     lessTwenty = today-timedelta(days=21)
 
-    lessThanThreeDays = Case.objects.filter(
-        status=1, confirmed_date=lessThree.strftime('%Y-%m-%d %H:%M:%S')).count()
+    lessThanThreeDays = Case.objects.filter(status=1, confirmed_date=lessThree.strftime('%Y-%m-%d %H:%M:%S')).count()
     fromFourToSeven = Case.objects.filter(status=1, confirmed_date__gte=lessSeven.strftime('%Y-%m-%d %H:%M:%S'),
                                           confirmed_date__lte=lessFour.strftime('%Y-%m-%d %H:%M:%S')).count()
     fromEighteToFouteen = Case.objects.filter(status=1, confirmed_date__gte=lessFourteen.strftime('%Y-%m-%d %H:%M:%S'),
